@@ -1,0 +1,137 @@
+
+body{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(bg-desktop.svg);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding:0;
+}
+
+body,main{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    gap: 0;
+    margin: 0;
+}
+/* Left Section */
+.left{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.logo{
+    width: 200px;
+    padding: 40px 0 30px 60px;
+}
+.image{
+    width: 600px;
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+/* Right Section */
+
+.right{
+    grid-area: b;
+    padding-top: 180px;
+    padding-left: 30px;
+    margin-left: 0;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+button{
+    background-color: white;
+    color:hsl(257, 40%, 49%);
+    font-weight: 700;
+    width: 150px;
+    border: solid transparent;
+    border-radius: 30px;
+    padding: 10px 32px;
+    box-shadow: 0 8px 8px 0 hsl(258, 43%, 33%);
+}
+
+button:hover{
+    color: white;
+    background-color: hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+.icons{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    display: flex;
+}
+.icon:hover{
+    cursor: pointer;
+    color:hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
+
+.icon{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:375px){
+    body{
+        background-image: url(bg-mobile.svg);
+
+    }
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        "b";
+        justify-content: center;
+        align-content: center;
+    }
+    .image{
+        width: 80%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
+    }
+    .right {
+        grid-area: b;
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .icons{
+        position: relative;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    
+}
